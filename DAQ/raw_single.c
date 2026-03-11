@@ -124,34 +124,19 @@ void FillHisto2D(TH2D *h_ampl_int, TH2D *h_psd_ampl, TH2D *h_psd_int, int ampl, 
 void raw_single() {
     
     bool fCopy = false;
-    const char* remoteHost = "134.176.17.136";
+    const char* remoteHost = "111.111.11.111";
 	
-	//const char* remoteFile = "/home/self-made/new_fpga/r_feb11_cosmic_ch3.bin";
-    //const char* localFile  = "/home/kazlou/Data/RedPitaya/IN/4ch/new_fpga/r_feb11_cosmic_ch3.bin";
 	
-	const char* fileName = "raw_mit_calib_Pb_ch3";
-	//const char* fileName = "raw_mit_cosmic_2066s_ch3";
-	
+	const char* fileName = "raw_data";
+
 	char remoteFile[120], localFile[120], output[120];
 	
 	sprintf(remoteFile, "/home/self-made/new_fpga/%s.bin", fileName);
-	sprintf(localFile, "/home/nay/Data/RedPitaya/IN/4ch/MIT/11feb/%s.bin", fileName);
-	sprintf(output, "/home/nay/Data/RedPitaya/OUT/MIT/11feb/%s.root", fileName);
+	sprintf(localFile, "/home/user/Data/RedPitaya/IN/4ch/%s.bin", fileName);
+	sprintf(output, "/home/user/Data/RedPitaya/OUT/%s.root", fileName);
 	
 	printf("%s\n%s\n%s\n", remoteFile, localFile, output);
-	//const char* remoteFile = "/home/self-made/new_fpga/r_feb11_na22_ch0.bin";
-	//const char* localFile  = "/home/nay/Data/RedPitaya/IN/4ch/MIT/11feb/r_feb11_na22_ch0.bin";
-	//const char* output = "/home/nay/Data/RedPitaya/OUT/MIT/11feb/r_feb11_na22_ch0.root";
 	
-	//const char* remoteFile = "/home/self-made/new_fpga/r_feb11_cs137_ch0.bin";
-    //const char* localFile  = "/home/kazlou/Data/RedPitaya/IN/4ch/new_fpga/r_feb11_cs137_ch0.bin";
-	
-    //const char* remoteFile = "/home/self-made/new_fpga/r_feb11_bi207_ch0.bin";
-    //const char* localFile  = "/home/kazlou/Data/RedPitaya/IN/4ch/new_fpga/r_feb11_bi207_ch0.bin";
-	
-	//const char* remoteFile = "/home/self-made/new_fpga/r_feb11_sr90_ch0.bin";
-    //const char* localFile  = "/home/kazlou/Data/RedPitaya/IN/4ch/new_fpga/r_feb11_sr90_ch0.bin";
-    
     int N_CHOSEN = 13;
 	
     if (fCopy) {
