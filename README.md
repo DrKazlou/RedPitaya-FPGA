@@ -2,6 +2,10 @@
 
 A custom FPGA firmware and C data acquisition system for the **4-channel RedPitaya** (STEMlab 125-14 Quad, Zynq xc7z020clg400-1). The design captures triggered ADC waveforms from all four channels simultaneously, streams them to DDR via AXI DMA, and writes them to disk for offline analysis with ROOT.
 
+## Acknowledgements
+
+The scripted Vivado project approach used here — driving the full build flow (block design assembly, synthesis, implementation, and bitstream generation) entirely from Tcl without the GUI — was inspired by and originally based on **Pavel Demin's** [red-pitaya-notes](https://github.com/pavel-demin/red-pitaya-notes) project. Adopting this methodology drastically reduces the time and effort required to recreate or modify a bitstream compared to the standard GUI-driven workflow, and makes the entire build fully reproducible from the command line.
+
 ---
 
 ## Table of Contents
